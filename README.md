@@ -19,3 +19,19 @@ Autism is a neuro-developmental disorder which impairs a person’s ability for 
 
 [QA Document]()
 
+## Team
+
+#### Ivana Jovasevic
+>ijovasev@sfu.ca 
+
+####  Shayne Kelly II
+>skellyii@sfu.ca 
+
+####  Peter Saffold
+> psaffold@sfu.ca
+
+#### Aaron Nguyen
+> ahn6@sfu.ca
+
+#### Jerry Liu
+> liuyal@sfu.ca 
