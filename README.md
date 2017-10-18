@@ -11,11 +11,11 @@ Autism is a neuro-developmental disorder which impairs a person’s ability for 
 
 ## Documentation
 
-[Project Plan] (https://drive.google.com/open?id=0B1jxNFhuwWIILUdFb3dSOGhjdEU)
+[Project Plan](https://drive.google.com/open?id=0B1jxNFhuwWIILUdFb3dSOGhjdEU)
 
-[Requirements Document] ()
+[Requirements Document]()
 
-[Design Document] ()
+[Design Document]()
 
-[QA Document] ()
+[QA Document]()
 
