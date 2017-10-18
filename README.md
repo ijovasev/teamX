@@ -1,4 +1,4 @@
-# Safety Beacon
+# Personal Emotion Traininer (P.E.T.)
 
 > Term project for Group #10
 
