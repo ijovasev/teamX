@@ -1,6 +1,6 @@
 # Personal Emotion Traininer (P.E.T.)
 
-> Term project for TeamX (Pronounced TeamX) - Group #10
+### Term project for TeamX (Pronounced TeamX) - Group #10
 
 ## Description
 
