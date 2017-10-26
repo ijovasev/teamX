@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class Main_menu: UIViewController {
 
@@ -22,7 +23,18 @@ class Main_menu: UIViewController {
     }
     
 
-
+    @IBAction func button_logout(_ sender: Any) {
+        
+        do{
+            try Auth.auth().signOut()
+            
+            self.dismiss(animated: false, completion: nil)
+        }
+        catch{
+        print("Logout ERROR")
+        }
+    }
+    
     
     
     
