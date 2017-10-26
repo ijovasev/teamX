@@ -7,57 +7,81 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController
 {
-    let username = "jerry"
-    let password = "1234"
-    
-    
-    override func viewDidLoad()
-    {
+    // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidLoad(){
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning()
-    {
+    
+    // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
     @IBOutlet weak var textField_username: UITextField!
-    
     @IBOutlet weak var textField_passowrd: UITextField!
-    
     @IBOutlet weak var Lable_LoginError: UILabel!
+    
+
     
     @IBAction func button_login(_ sender: Any)
     {
-        var in_name = ""
-        var in_password = ""
-        
-        in_name = textField_username.text!
-        in_password = textField_passowrd.text!
-        
-        if in_name == username && in_password == password
-        {
-            Lable_LoginError.text = "Good"
-
-            performSegue(withIdentifier: "seg1", sender: self)
-            
-        }
-        else
-        {
-            Lable_LoginError.text = "Bad"
+        if let email = textField_username.text, let password = textField_passowrd.text {
+            Auth.auth().signIn(withEmail: email, password: password, completion: {user, error in
+                if let firebaseError = error {
+                    self.Lable_LoginError.text = "ERROR"
+                    print(firebaseError.localizedDescription)
+                }
+                self.presentLoggedInScreen()
+                print("GGG")
+            })
         }
     }
     
     @IBAction func button_signUp(_ sender: Any)
     {
-        Lable_LoginError.text = "signup"
+        if let email = textField_username.text, let password = textField_passowrd.text {
+            Auth.auth().createUser(withEmail: email, password: password, completion: {user, error in
+                if let firebaseError = error{
+                    self.Lable_LoginError.text = "ERROR"
+                    print(firebaseError.localizedDescription)
+                }
+                print("GGG")
+            })
+        }
     }
+    
+    func presentLoggedInScreen(){
+        let storyboard:UIStoryboard = UIStoryboard(name: "mani", bundle: nil)
+        let loggedInVC:Main_menu = storyboard.instantiateViewController(withIdentifier: "Main_menu") as! Main_menu
+        self.present(loggedInVC, animated: false, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }
