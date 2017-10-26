@@ -8,5 +8,7 @@ use_frameworks!
   # Pods for PET
   pod ‘Firebase/Core’
   pod ‘Firebase/Auth’
+  pod 'Firebase/Database'
+  pod 'Firebase/Performance'
 
 end
